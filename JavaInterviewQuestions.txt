@@ -1,0 +1,13 @@
+1. Can static functions be overloaded/overridden? 
+A. Static functions can be overloaded, not overridden. If there is a similar function with the same signature in both base and derived classes, the base class method will be executed, derived class method is not taken into consideration.
+
+2. Mutable/immutable
+A. Immutable class in Java is a final class. Meaning, once an object is created, it cannot be changed. The variables are all private and final, there are no setters for the variables. There will be a constructor that will create a deep copy of the instance so that it cannot be modified by any references.
+
+3. Beans
+A. A Java Bean has private variables, must be serializable, public no-arg constructor, public getters/setters.
+
+4. Singleton class
+A. Only one object, for efficient memory/resource handling. Make the constructor private and create one getInstance() static method to return an instance of this Singleton class
+
+5. 

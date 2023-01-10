@@ -14,4 +14,23 @@ A. Only one object, for efficient memory/resource handling. Make the constructor
 A. throw - used to throw one exception, from inside a function.
 throws - used in signature to indicate what exceptions could be thrown by a function; can throw multiple exceptions
 
+6. NoClassDefFoundError vs ClassNotFoundException
+A. Note that the first one is error and second is an exception. Both are related to classpath issues. 
+    NoClassDefFoundError - happens when the class is present at compile time but not able to find it in the classpath during runtime. This is derived from LinkageError. It is a fatal error. 
+    ClassNotFoundException - happens when the class is loaded dynamically during runtime and the class loader is not able to find the specified class. This needs to be explicitly handled.
+    
+7. sychronized block vs synchronized method
+A. sychronized method - synchronizing the object of the class; low performance; higher waiting time
+    synchronized block - part of the method to be synchronized; high performance; lower waiting time\
+    
+8. StaleStateException
+A. Happens in hibernate. Happens when a timestamp or versioning check failed - meaning it could be stale data.
+Also happens when update/delete is tried to perform on data that may not exist
+
+9. HashTable vs HashMap
+A. Key-Value pair.
+HashMap is not synchronized; HashTable is synchronized
+HashMap allows for one key/one value null; HashTable does not
+HashMap does not need hashCode and equals method implemented; HashTable should
+Since no threads, faster but not safe; Since uses threads, safe but slower
 

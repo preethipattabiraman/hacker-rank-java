@@ -10,4 +10,8 @@ A. A Java Bean has private variables, must be serializable, public no-arg constr
 4. Singleton class
 A. Only one object, for efficient memory/resource handling. Make the constructor private and create one getInstance() static method to return an instance of this Singleton class
 
-5. 
+5. throw vs throws
+A. throw - used to throw one exception, from inside a function.
+throws - used in signature to indicate what exceptions could be thrown by a function; can throw multiple exceptions
+
+
